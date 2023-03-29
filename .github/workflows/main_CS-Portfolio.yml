@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v1
       with:
         registry: https://index.docker.io/
-        username: ${{ secrets.AzureAppService_ContainerUsername_cc6bbe6f51794dff8e1dca6befbd17a7 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_e0be93d8e98349e38b480897bdf1ff12 }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_850bc08b557c4c8a811af14d803d05d5 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_8fb4aee49a3542bba11f7ba7f560944d }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_cc6bbe6f51794dff8e1dca6befbd17a7 }}/cyberxsecurityproject1-apachewebserver:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_850bc08b557c4c8a811af14d803d05d5 }}/project1-apachewebserver:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'CS-Portfolio'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_614464ff2def41fe98ab862c6832ad4f }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_cc6bbe6f51794dff8e1dca6befbd17a7 }}/cyberxsecurityproject1-apachewebserver:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_e0e55dfc0514449085f2e1810f81ef83 }}
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_850bc08b557c4c8a811af14d803d05d5 }}/project1-apachewebserver:${{ github.sha }}'
