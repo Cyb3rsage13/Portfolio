@@ -51,14 +51,14 @@
                 <p>the private key exposure once again sums up why we should be carefull with how we treat data</p>
                 <p>and double check when or what we publish to the web.</p>
                 <br>
-                <p>Github did not comment on who published the keys but did state the following:
-                "This week, we discovered that GitHub.com's RSA SSH private key was briefly exposed in a public GitHub repository. 
-                We immediately acted to contain the exposure and began investigating to understand the root cause and impact. 
-                We have now completed the key replacement, and users will see the change propagate over the next thirty minutes," <a>GitHub stated in the blog post.</a> <a href=https://github.blog/2023-03-23-we-updated-our-rsa-ssh-host-key/> </a href>
-
-                The blog post explained that the change does not affect any customer data, requires no change for ECDSA or Ed25519, or the infrastructure of GitHub only the operations "over SSH using RSA."
-				
-				
+                <p>Github did not comment on who published the keys but did state the following:</p>
+                <p>"This week, we discovered that GitHub.com's RSA SSH private key was briefly exposed in a public GitHub repository.</p> 
+                <p>We immediately acted to contain the exposure and began investigating to understand the root cause and impact.</p>
+                <p>We have now completed the key replacement, and users will see the change propagate over the next thirty minutes," <a href="https://github.blog/2023-03-23-we-updated-our-rsa-ssh-host-key/">GitHub stated in the blog post.</a></p>
+				<br>
+                <p>The blog post explained that the change does not affect any customer data, requires no change for ECDSA or Ed25519, or the infrastructure of GitHub only the operations "over SSH using RSA." </p>
+				<br>
+				<p>Due to this companies will have to check how far reaching the impact is of the keys leaking, now that some automated systems might suddenly not work especially ones that aren't checked as often.</p>
                 </p>
             </div>
         </article>
